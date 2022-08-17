@@ -1,1 +1,7 @@
-#map { height: 180px; }
+#map { 
+    height: 70vh;
+    width: 70%;
+    margin: 5% auto;
+    border-radius: 2%;
+    box-shadow: 5px 10px #888888;
+}

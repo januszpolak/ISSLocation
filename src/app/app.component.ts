@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, ɵɵqueryRefresh } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { getLocaleDirection } from '@angular/common';
 
 declare const L:any;
 
@@ -33,20 +34,22 @@ export class AppComponent {
       this.latitude = res.iss_position.latitude;
       this.longitude = res.iss_position.longitude;
 
-    let map = L.map('map').setView([this.latitude,this.longitude], 13);
-
+    let map = L.map('map').setView([this.latitude,this.longitude], 7);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap'
     }).addTo(map);
 
     let marker = L.marker([this.latitude,this.longitude]).addTo(map);
-
+    
     })
     
   }
+  
 
-
+  
+ 
+  
 
 
 
