@@ -2,9 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;700&display=swap');
 
 body{
-    background-image: url("https://pixabay.com/get/gc61939f831c2af9be0e42954b9f38942d77cbfe6a80593a9f0b983f4025fe4744b3e691056c1bb735b17c0612075406d_1920.jpg");
+    background-image: url("https://pixabay.com/get/g272fdb19e3034fb16f048e5f28b0d506efe2fe1efebf1fe75ebf15ec8120e25ddd21c98b031448ed416b6f9636e3d34e5aec893fd53d3d0cbb4cde2a60cf900b_1920.jpg");
     background-repeat: no-repeat;
     background-position: center;
     font-family: 'Baloo 2', cursive;
+    color: aliceblue;
 
 }

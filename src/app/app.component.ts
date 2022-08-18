@@ -1,6 +1,7 @@
 import { Component, Input, ɵɵqueryRefresh } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { getLocaleDirection } from '@angular/common';
+import { UnaryOperatorExpr } from '@angular/compiler';
 
 declare const L:any;
 
@@ -18,7 +19,7 @@ export class AppComponent {
   // positions variables
   latitude: any = '';
   longitude: any = '';
-
+  map:any;
   constructor(private http:HttpClient){}
 
   ngOnInit(){
@@ -33,7 +34,7 @@ export class AppComponent {
       // positions variables from url
       this.latitude = res.iss_position.latitude;
       this.longitude = res.iss_position.longitude;
-
+    
     let map = L.map('map').setView([this.latitude,this.longitude], 4);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
@@ -45,7 +46,12 @@ export class AppComponent {
     })
     
   }
-
+  refresh(){
+    //this.map.off();
+    //this.map.remove();
+    this.getLocation();
+    
+  }
 
   
 
