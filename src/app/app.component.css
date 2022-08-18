@@ -1,7 +1,17 @@
+
 #map { 
-    height: 70vh;
-    width: 70%;
-    margin: 5% auto;
+    height: 60vh;
+    width: 60%;
+    margin: 1% auto;
     border-radius: 2%;
-    box-shadow: 5px 10px #888888;
+    box-shadow: 5px 10px #1a1a1a;
+}
+
+h1{
+    text-align: center;
+    margin-top: 2%;
+}
+p{
+    text-align: center;
+    font-weight: bold;
 }

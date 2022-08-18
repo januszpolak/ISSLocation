@@ -34,7 +34,7 @@ export class AppComponent {
       this.latitude = res.iss_position.latitude;
       this.longitude = res.iss_position.longitude;
 
-    let map = L.map('map').setView([this.latitude,this.longitude], 7);
+    let map = L.map('map').setView([this.latitude,this.longitude], 4);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '© OpenStreetMap'
@@ -45,6 +45,8 @@ export class AppComponent {
     })
     
   }
+
+
   
 
   
