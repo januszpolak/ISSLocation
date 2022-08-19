@@ -1,9 +1,9 @@
-import { Component, Input, ɵɵqueryRefresh } from '@angular/core';
+import { Component, Renderer2, ElementRef, ViewChild, AfterViewInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { getLocaleDirection } from '@angular/common';
-import { UnaryOperatorExpr } from '@angular/compiler';
+
 
 declare const L:any;
+declare var $: any;
 
 @Component({
   selector: 'app-root',
@@ -14,17 +14,22 @@ export class AppComponent {
   title = 'ISSLocation';
 
   // ISS current location API url
-  url = 'http://api.open-notify.org/iss-now.json';
+  url: string = 'http://api.open-notify.org/iss-now.json';
 
   // positions variables
   latitude: any = '';
   longitude: any = '';
-  map:any;
-  constructor(private http:HttpClient){}
+  
+
+  @ViewChild('root') root: any;
+
+
+  constructor(private http:HttpClient, private renderer:Renderer2){}
 
   ngOnInit(){
 
     this.getLocation();
+    
   }
 
   getLocation(){
@@ -46,22 +51,19 @@ export class AppComponent {
     })
     
   }
+
+  
   refresh(){
-    //this.map.off();
-    //this.map.remove();
+    const map = document.getElementById("map")?.remove();
+    let div = this.renderer.createElement('div');
+    this.renderer.setProperty(div, 'id', 'map');
+    this.renderer.appendChild(document.body, div);
+
+    
     this.getLocation();
     
+    
   }
-
-  
-
-  
- 
-  
-
-
-
-
 
 
 
