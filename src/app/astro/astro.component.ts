@@ -14,6 +14,9 @@ export class AstroComponent implements OnInit {
   number: any;
   people: any;
   name: any;
+  craft: any;
+  lenght: any;
+  
   constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
@@ -23,7 +26,9 @@ export class AstroComponent implements OnInit {
       this.number = result.number;
       this.people = result.people;
       this.name = result.people.name;
+      this.craft = result.people.craft;
 
+      
     })
 
     
