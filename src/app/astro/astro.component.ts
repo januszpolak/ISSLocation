@@ -11,8 +11,8 @@ export class AstroComponent implements OnInit {
   // url api wih current number of astronauts in space
   url: string = 'http://api.open-notify.org/astros.json';
 
-  number: any | undefined;
-  people: any | undefined;
+  number: any;
+  people: any;
   name: any;
   constructor(private http:HttpClient) { }
 
