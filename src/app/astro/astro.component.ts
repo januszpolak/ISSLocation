@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-astro',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AstroComponent implements OnInit {
 
-  constructor() { }
+  // url api wih current number of astronauts in space
+  url: string = 'http://api.open-notify.org/astros.json';
+
+  number: any | undefined;
+  people: any | undefined;
+  name: any;
+  constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
+
+    this.http.get(this.url).subscribe((result:any)=>{
+      console.log(result.number, result.people);
+      this.number = result.number;
+      this.people = result.people;
+      this.name = result.people.name;
+
+    })
+
+    
   }
 
 }
