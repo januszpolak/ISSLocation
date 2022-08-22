@@ -9,25 +9,32 @@
 }
 
 h1{
+    display:table-cell;
+    vertical-align:middle;
     
-    margin-top: 2%;
     color: #003247;
     font-size: 80px;
+    font-weight: bold;
+}
+h4 {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+    
+    
 }
 p{
     font-weight: bold;
     color: black;
 }
 
-
 .wrap {
-    
+    position: relative;
     background-color: white;
     height: 70vh;
     width: 100%;
-    margin: 10% auto;
+    margin-top: 10%;
 }
-
 .title {
     position: absolute;
     top: 50%;
