@@ -1,17 +1,19 @@
 <div class="wrap">
     <div class="title">
-<h1>Where is<br> International<br> Space Staion ?</h1>
-<h4>Check this below !</h4>
+<h1>Where is<br> International<br> Space Station ?</h1>
+<h4>Check this below on map!</h4>
+
 </div>
 </div>
+<app-astro></app-astro>
 <div class="positions">
-    <p id="position">Latitude: {{ latitude }}</p>
-    <p id="position">Longitude: {{ longitude }}</p>
+    <p id="position">Actual coordinates: Latitude: {{ latitude }} Longitude: {{ longitude }}</p>
+    
 </div>
 <div class="text-center">
     <button type="button" class="btn btn-primary" (click) = "refresh()">Reload position</button>
   </div>
 
-<app-astro></app-astro>
+
 <div id="map"></div>
 
