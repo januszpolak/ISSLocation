@@ -1,20 +1,15 @@
+<div class="wrap">
+<div class="title"><h1>Where is International Space Staion ?</h1></div>
+<div class="positions">
+    <p id="position">Latitude: {{ latitude }}</p>
+    <p id="position">Longitude: {{ longitude }}</p>
+</div>
 
-<!-- <h1>International Space Station current position</h1>
-<p id="position">Latitude: {{ latitude }}</p>
-<p id="position">Longitude: {{ longitude }}</p>
-<div id="map"></div>
-<button type="button" class="btn btn-warning"(click) = "refresh()">Refresh position</button>
+</div>
+<div class="text-center">
+    <button type="button" class="btn btn-primary" (click) = "refresh()">Reload position</button>
+  </div>
+
 <app-astro></app-astro>
- -->
- <div class="container-lg mx-auto w-50">
+<div id="map"></div>
 
- <div class="card" style="width: auto">
-    
-    <div class="card-body">
-      <h5 class="card-title">International Space Station current position</h5>
-      <div id="map"></div>
-      <button class="btn btn-primary" (click) = "refresh()">Reload position</button>
-    </div>
-  </div>
-
-  </div>

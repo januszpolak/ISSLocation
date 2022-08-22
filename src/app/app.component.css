@@ -1,7 +1,7 @@
 
 #map { 
     height: 70vh;
-    width: auto;
+    width: 90%;
     margin: 2% auto;
     border-radius: 2%;
     box-shadow: 5px 10px #1a1a1a;
@@ -9,10 +9,28 @@
 }
 
 h1{
-    text-align: center;
+    
     margin-top: 2%;
+    color: #003247;
+    font-size: 80px;
 }
 p{
-    text-align: center;
     font-weight: bold;
+    color: black;
+}
+
+
+.wrap {
+    
+    background-color: white;
+    height: 70vh;
+    width: 100%;
+    margin: 10% auto;
+}
+
+.title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

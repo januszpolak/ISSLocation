@@ -57,7 +57,6 @@ export class AppComponent {
     let div = this.renderer.createElement('div');
     this.renderer.setProperty(div, 'id', 'map');
     this.renderer.appendChild(document.body, div);
-    //this.renderer.appendChild(this.elmRef.nativeElement, div);
     
     this.getLocation(); 
   }
