@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 
 declare const L:any;
-declare var $: any;
+
 
 @Component({
   selector: 'app-root',
@@ -19,10 +19,10 @@ export class AppComponent {
   // positions variables
   latitude: any = '';
   longitude: any = '';
+  
+  
 
-
-
-  constructor(private http:HttpClient, private renderer:Renderer2){}
+  constructor(private http:HttpClient, private renderer:Renderer2, private elmRef: ElementRef){}
 
   ngOnInit(){
 
@@ -57,8 +57,8 @@ export class AppComponent {
     let div = this.renderer.createElement('div');
     this.renderer.setProperty(div, 'id', 'map');
     this.renderer.appendChild(document.body, div);
-   
-
+    //this.renderer.appendChild(this.elmRef.nativeElement, div);
+    
     this.getLocation(); 
   }
   
