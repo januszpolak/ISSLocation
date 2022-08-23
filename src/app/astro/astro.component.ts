@@ -16,8 +16,11 @@ export class AstroComponent implements OnInit {
   name: any;
   craft: any;
 
-  ISSArr = [];
-  TanArr = [];
+  ISSArr: any[] = [];
+  TanArr: any[] = [];
+
+  element:any;
+  iss:any;
   
   constructor(private http:HttpClient) { }
 
@@ -34,24 +37,24 @@ export class AstroComponent implements OnInit {
       for (let i = 0; i < this.people.length; i++) {
         const element = this.people[i].craft;
         console.log(element);
-        
         let ISSArr = [];
         let TanArr = [];
 
+        // push name of station into new array
         if (element === "ISS") {
-          ISSArr.push(element)
-          console.log(this.ISSArr.length);
+          this.ISSArr.push(element)
           
+        }else if (element === "Tiangong") {
+          this.TanArr.push(element)
           
         }else {
-          TanArr.push()
-          console.log(this.TanArr.length);
+          console.log("Differnet station");
           
         }
-        
-        
-        
       }
+      // count how many stations elements are in new arrray to know how many people are in different stations
+      console.log(this.ISSArr.length);
+      console.log(this.TanArr.length);
     })
 
     
