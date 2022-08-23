@@ -15,7 +15,6 @@ export class AstroComponent implements OnInit {
   people: any;
   name: any;
   craft: any;
-  lenght: any;
   
   constructor(private http:HttpClient) { }
 
@@ -31,6 +30,7 @@ export class AstroComponent implements OnInit {
       
     })
 
+    
     
   }
 

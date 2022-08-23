@@ -1,7 +1,8 @@
-<h2>Currently there're {{ number }} people in space !</h2>
+<p style="margin-top:5% ;">Currently there're {{ number }} people in space !</p>
 <table>
 <tr *ngFor="let person of people">
-    <td>{{person.name}}</td>
+    <td><p style="font-size:16px ;">{{person.name}}</p></td>
+    <td><p style="font-size:16px ;">{{person.craft}}</p></td>
     
 </tr>
 </table>

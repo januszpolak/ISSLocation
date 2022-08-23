@@ -11,3 +11,10 @@ body{
     color: blanchedalmond;
 
 }
+
+p{
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+}
