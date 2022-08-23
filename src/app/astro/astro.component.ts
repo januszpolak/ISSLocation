@@ -21,7 +21,7 @@ export class AstroComponent implements OnInit {
 
   element:any;
   iss:any;
-  
+  tan:any;
   constructor(private http:HttpClient) { }
 
   ngOnInit(): void {
@@ -37,8 +37,7 @@ export class AstroComponent implements OnInit {
       for (let i = 0; i < this.people.length; i++) {
         const element = this.people[i].craft;
         console.log(element);
-        let ISSArr = [];
-        let TanArr = [];
+        
 
         // push name of station into new array
         if (element === "ISS") {
@@ -53,8 +52,11 @@ export class AstroComponent implements OnInit {
         }
       }
       // count how many stations elements are in new arrray to know how many people are in different stations
-      console.log(this.ISSArr.length);
-      console.log(this.TanArr.length);
+       console.log(this.ISSArr.length);
+       console.log(this.TanArr.length);
+
+       this.iss = this.ISSArr.length;
+       this.tan = this.TanArr.length;
     })
 
     
