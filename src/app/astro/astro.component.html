@@ -1,6 +1,7 @@
 <p style="margin-top:5% ;">Currently there're {{ number }} people in space !</p>
 <p>{{ iss }} people are on International Space Station (USA) and {{ tan }} people on Tiangong (China)<p>
 <table>
+    <!-- ng for loop to show astronauts names and crafts from API -->
 <tr *ngFor="let person of people">
     <td><p style="font-size:16px ;">{{person.name}}</p></td>
     <td><p style="font-size:16px ;">{{person.craft}}</p></td>

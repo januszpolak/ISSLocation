@@ -39,7 +39,7 @@ export class AstroComponent implements OnInit {
         console.log(element);
         
 
-        // push name of station into new array
+        // push name of station into new arrays
         if (element === "ISS") {
           this.ISSArr.push(element)
           
@@ -55,6 +55,7 @@ export class AstroComponent implements OnInit {
        console.log(this.ISSArr.length);
        console.log(this.TanArr.length);
 
+       // variables show how may people are in different stations
        this.iss = this.ISSArr.length;
        this.tan = this.TanArr.length;
     })
